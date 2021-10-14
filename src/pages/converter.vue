@@ -58,6 +58,7 @@ export default defineComponent({
       })
     },
     result (): number {
+      console.log('three')
       return ((this.listCountFrom[0].Value / this.listCountTo[0].Value) * this.value[0].count)
     }
   }
