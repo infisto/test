@@ -46,7 +46,6 @@ export default defineComponent({
     listCountFrom () : ICurrency[] {
       return this.list.filter((el: ICurrency) => {
         if (el.Name === this.value[0].input) {
-          console.log(el.Value)
           return el.Value
         }
       })
