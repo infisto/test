@@ -15,6 +15,7 @@
         <option v-for="item in list" :key="item">{{item.Name}}</option>
       </select>
       <p>{{result}}</p>
+      <p>{{summary}}</p>
     </div>
   </div>
 </div>
@@ -23,6 +24,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { ICurrency } from '@/interfaces/Interface'
+import {sum} from '@/functions/sum'
 
 export default defineComponent({
   name: 'currencies',
@@ -60,6 +62,9 @@ export default defineComponent({
     result (): number {
       console.log('three')
       return ((this.listCountFrom[0].Value / this.listCountTo[0].Value) * this.value[0].count)
+    },
+    summary () : number {
+      return sum(1, 3)
     }
   }
 })
